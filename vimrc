@@ -1,10 +1,7 @@
-call pathogen#incubate()
-call pathogen#helptags()
-
 set nocompatible
 filetype off
 
-set rtp +=~/.vim/bundle/vundle
+set rtp +=~/.dotfiles/vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
