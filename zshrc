@@ -54,3 +54,5 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
   export TERM='xterm-color'
 fi
+stty start undef
+stty stop undef
