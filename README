@@ -1,5 +1,8 @@
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/zshrc ~/.zshrc
+sudo apt-get install exuberant-ctags
+gem install ctags
+gem ctags
 
 cd ~/.dotfiles
 git submodule init

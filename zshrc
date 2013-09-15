@@ -44,7 +44,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-C
-D
 # Customize to your needs...
+export EDITOR=vim
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

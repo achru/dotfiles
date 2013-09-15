@@ -1,8 +1,7 @@
 set nocompatible
 filetype off
-
 set rtp +=~/.dotfiles/vim/bundle/vundle
-call vundle#rc()
+call vundle#rc("~/.dotfiles/vim/bundle")
 
 Bundle 'gmarik/vundle'
 
@@ -10,16 +9,18 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/surround'
-Bundle 'wincent/Command-T'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-surround'
+Bundle 'wincent/Command-T'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-unimpaired'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'flazz/vim-colorschemes'
 
-
+let mapleader="\<Space>"
 set hidden
 set number 
 set vb t_vb=
