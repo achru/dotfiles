@@ -32,3 +32,5 @@ if has("autocmd")
 endif
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
+set t_Co=256
+colorscheme kruby
