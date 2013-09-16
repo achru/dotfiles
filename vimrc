@@ -47,3 +47,4 @@ map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 set autoindent 
 set grepprg=ack
+set tags=./tags;
