@@ -24,6 +24,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 runtime macros/matchit.vim
 
 let mapleader="\<Space>"
@@ -48,3 +49,19 @@ map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 set autoindent 
 set grepprg=ack
 set tags=./tags;
+set backupdir=~/.tmp
+set directory=~/.tmp
+set laststatus=2
+set et
+set smarttab
+set backspace=indent,eol,start
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>m:call RenameFile()<cr>
