@@ -15,7 +15,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tomtom/tcomment_vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'kana/vim-textobj-user'
@@ -25,6 +25,10 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
+Bundle "scrooloose/nerdtree"
+Bundle "jgdavey/tslime.vim"
+Bundle "thoughtbot/vim-rspec"
+
 runtime macros/matchit.vim
 
 let mapleader="\<Space>"
@@ -65,3 +69,22 @@ function! RenameFile()
   endif
 endfunction
 map <Leader>m:call RenameFile()<cr>
+
+map <Leader>q :call RunCurrentSpecFile()<CR>
+map <Leader>w :call RunNearestSpec()<CR>
+map <Leader>s :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("nocorrect spring rspec {spec}\n")'
+map <C-n> :NERDTreeToggle<CR>
+
+
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>n :call RenameFile()<cr>
