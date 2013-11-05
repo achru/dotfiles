@@ -45,11 +45,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export EDITOR=vim
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export TERM='xterm-256color'
 stty start undef
-stty stop undef
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+stty -ixon
+stty stop undef
+export WS_APP_ID=748781735148584
+export WS_APP_SECRET=05855c2c9ebb20a0d7843e0aac075ce3

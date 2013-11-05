@@ -10,9 +10,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rbenv'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
-Bundle 'wincent/Command-T'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'kien/ctrlp.vim'
@@ -22,12 +24,14 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'flazz/vim-colorschemes'
 Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle 'tomtom/tcomment_vim'
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "scrooloose/nerdtree"
 Bundle "jgdavey/tslime.vim"
 Bundle "thoughtbot/vim-rspec"
+Bundle "groenewege/vim-less"
 
 runtime macros/matchit.vim
 
@@ -44,14 +48,14 @@ endif
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 set t_Co=256
-colorscheme kruby
+colorscheme gbr256
 
 map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 set autoindent 
-set grepprg=ack
+set grepprg=ag
 set tags=./tags;
 set backupdir=~/.tmp
 set directory=~/.tmp
@@ -74,7 +78,7 @@ map <Leader>q :call RunCurrentSpecFile()<CR>
 map <Leader>w :call RunNearestSpec()<CR>
 map <Leader>s :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = 'call Send_to_Tmux("nocorrect spring rspec {spec}\n")'
+" let g:rspec_command = 'call Send_to_Tmux("nocorrect zeus rspec {spec}\n")'
 map <C-n> :NERDTreeToggle<CR>
 
 
@@ -88,3 +92,4 @@ function! RenameFile()
   endif
 endfunction
 map <Leader>n :call RenameFile()<cr>
+let g:gist_clip_command = 'pbcopy'

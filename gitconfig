@@ -1,0 +1,49 @@
+[init]
+  templatedir = ~/.git_template
+[alias]
+  ctags = !.git/hooks/ctags
+[user]
+  email = acchruszcz@gmail.com
+  name = arturro
+[github]
+  user = achru
+[alias]
+  co = checkout
+  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+  st = status
+  ci = commit 
+  co = checkout
+  d = diff
+  dc = diff --cached
+  amend = commit --amend
+  aa = add --all
+  a = add
+  pulff = pull --ff-only
+  l = "source ~/.githelpers && pretty_git_log"
+  la = !git l --all
+  r = !git l -30
+  ra = !git r --all
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[color "diff"]
+  meta = yellow 
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim --noplugin
+[apply]
+  whitespace = nowarn
+[help]
+  autocorrect = 1
+[branch]
+  autosetupmerge = true
+  autosetuprebase = always
+[push]
+  default = current
+[rerere]
+  enabled = 1
+[merge]
+  tool = vimdiff
