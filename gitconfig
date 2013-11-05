@@ -19,7 +19,7 @@
   aa = add --all
   a = add
   pulff = pull --ff-only
-  l = "source ~/.githelpers && pretty_git_log"
+  l = "!source ~/.githelpers && pretty_git_log"
   la = !git l --all
   r = !git l -30
   ra = !git r --all
