@@ -40,7 +40,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,5 +53,4 @@ stty start undef
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 stty -ixon
 stty stop undef
-export WS_APP_ID=748781735148584
-export WS_APP_SECRET=05855c2c9ebb20a0d7843e0aac075ce3
+source $HOME/.variables

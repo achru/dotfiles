@@ -78,7 +78,7 @@ map <Leader>q :call RunCurrentSpecFile()<CR>
 map <Leader>w :call RunNearestSpec()<CR>
 map <Leader>s :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-" let g:rspec_command = 'call Send_to_Tmux("nocorrect zeus rspec {spec}\n")'
+" let g:rspec_command = "nocorrect zeus rspec {spec}\n"
 map <C-n> :NERDTreeToggle<CR>
 
 

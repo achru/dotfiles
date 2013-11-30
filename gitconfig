@@ -3,7 +3,7 @@
 [alias]
   ctags = !.git/hooks/ctags
 [user]
-  email = acchruszcz@gmail.com
+	email = artchru@gmail.com
   name = arturro
 [github]
   user = achru

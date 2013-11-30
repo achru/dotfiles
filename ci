@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+msg = []
+ARGV.each do |arg|
+  word = arg.dup
+  msg <<  if word[0] == '[' then word.prepend("\n") else word end
+end
+msg = msg.join(' ')
+`git ci -m #{msg}`
