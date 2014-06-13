@@ -47,10 +47,29 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 export PATH="/usr/local/bin:$HOME/.rbenv/bin:$PATH"
+export EDITOR='vim'
 eval "$(rbenv init -)"
 export TERM='xterm-256color'
 stty start undef
-[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 stty -ixon
 stty stop undef
 source $HOME/.variables
+alias workszop="cd ~/projects/workszopy/"
+alias dayzee="cd ~/netguru/dayzee/"
+alias factor="cd ~/netguru/factor/"
+alias remotespace="cd ~/projects/remote_space"
+alias pol="cd ~/netguru/pg"
+alias ticzer="cd ~/projects/ticzer"
+alias zshrc="vim ~/.dotfiles/zshrc"
+alias vimrc="vim ~/.dotfiles/vimrc"
+alias rs="rails s"
+alias mdb="mongod &"
+alias redis="redis-server &"
+alias zst="zeus start"
+alias zs="zeus s"
+alias es="elasticsearch &"
+alias fashion="cd ~/netguru/fashion"
+alias homr="cd ~/projects/homer"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rbenv'
 Bundle 'tpope/vim-rake'
@@ -32,7 +33,8 @@ Bundle "scrooloose/nerdtree"
 Bundle "jgdavey/tslime.vim"
 Bundle "thoughtbot/vim-rspec"
 Bundle "groenewege/vim-less"
-
+Bundle "altercation/vim-colors-solarized"
+Bundle "slim-template/vim-slim"
 runtime macros/matchit.vim
 
 let mapleader="\<Space>"
@@ -48,7 +50,8 @@ endif
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 set t_Co=256
-colorscheme gbr256
+set background=light
+colorscheme solarized
 
 map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
@@ -78,7 +81,7 @@ map <Leader>q :call RunCurrentSpecFile()<CR>
 map <Leader>w :call RunNearestSpec()<CR>
 map <Leader>s :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-" let g:rspec_command = "nocorrect zeus rspec {spec}\n"
+let g:rspec_command = "!bundle exec rspec {spec}"
 map <C-n> :NERDTreeToggle<CR>
 
 
@@ -93,3 +96,4 @@ function! RenameFile()
 endfunction
 map <Leader>n :call RenameFile()<cr>
 let g:gist_clip_command = 'pbcopy'
+let NERDTreeDirArrows=0
